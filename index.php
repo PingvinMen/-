@@ -37,8 +37,8 @@
 		?>
 		<div id="body">
 			<?php
-			//ВЫБРАТЬ все столбцы из таблиы comment, и отсортировать по дате:
-				$query = "SELECT * FROM comments ORDER BY id";
+			//ВЫБРАТЬ все столбцы из таблиы comment, и отсортировать по порядку создания записи:
+				$query = "SELECT * FROM comments ORDER BY id DESC";
 			//Делаем запрос к БД, результат запроса пишем в $result:
 				$result = mysqli_query($link, $query) or die( mysqli_error($link));
 			//Преобразуем то, что отдала нам база в нормальный массив PHP $date:
